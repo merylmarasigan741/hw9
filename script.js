@@ -94,20 +94,29 @@ document.querySelector("#numberConversionOutput").innerHTML = finalConversionRes
 
 // TODO:
 // 1. Create at least 2-3 numeric variables
+
+const num1 = 7;
+const num2 = 29;
+const num3 = 3.1415;
 //
 // 2. Perform calculations:
 //    - at least one addition
+const sum = num1 + num2;
 //    - at least one other operation (subtract, multiply, or divide)
+const product = num2 * num3;
 //
 // 3. Use at least ONE of the following:
 //    - toFixed()
 //    - toLocaleString()
 //    - Number.parseInt()
 //    - Number.parseFloat()
+const fixedProduct = product.toFixed(2);
 //
 // 4. Build a string showing your results
+const mathResults = `Sum of ${num1} and ${num2} is: ${sum}. Product of ${num2} and ${num3} is: ${product} (fixed to 2 decimal points: ${fixedProduct})`;  
 //
 // 5. Display the results inside the element with id="mathOutput"
+document.querySelector("#mathOutput").textContent = mathResults;
 
 // ==========================
 // Part 4: Conditionals
