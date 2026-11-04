@@ -74,7 +74,7 @@ Your JavaScript must be stored in an **external** file named `script.js`.
 
 ---
 
-## Part 1: Date Display
+## Part 1: Date Display [X]
 
 Create a section on the page that displays the current date in this exact format:
 
@@ -94,7 +94,7 @@ Create a section on the page that displays the current date in this exact format
 
 ---
 
-## Part 2: Number Conversion and Validation
+## Part 2: Number Conversion and Validation [X]
 
 Create a second section called something like:
 
