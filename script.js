@@ -44,7 +44,6 @@ const convertedNumeric1 = Number(numericString1);
 const convertedNumeric1IsNaN = Number.isNaN(convertedNumeric1);
 const convertedNumeric1IsInteger = Number.isInteger(convertedNumeric1);
 
-
 const convertedNumeric2 = Number(numericString2);
 const convertedNumeric2IsNaN = Number.isNaN(convertedNumeric2);
 const convertedNumeric2IsInteger = Number.isInteger(convertedNumeric2);
@@ -53,7 +52,17 @@ const convertedDecimal = Number(decimalString);
 const convertedDecimalIsNaN = Number.isNaN(convertedDecimal);
 const convertedDecimalIsInteger = Number.isInteger(convertedDecimal);
 
-const convertedString = Number(string);
+var convertedString = Number(string);
+var finalConvertedString;
+
+// ONE IF/ELSE BLOCK FOR PART 4
+if (Number.isNaN(convertedString)){
+    finalConvertedString = "This value is not a number";
+
+}else{
+    finalConvertedString = convertedString;
+}
+
 const convertedStringIsNaN = Number.isNaN(convertedString);
 const convertedStringIsInteger = Number.isInteger(convertedString);
 
@@ -67,10 +76,16 @@ const convertedStringIsInteger = Number.isInteger(convertedString);
 // Example format (you must create your own variables):
 // "Original: '42' -> Converted: 42 -> isNaN: false -> isInteger: true"
 
+
+//* 1ST IF/ELSE BLOCK OF PART 4  (if converting string to Number results in NaN, replaced 'NaN' with 'This value is not a valid number'*/
+if(convertedString === NaN){
+    convertedString = 'This value is not a number';
+}
+
 const convertedNumeric1Sentence = `Original: '${numericString1}' -> Converted: ${convertedNumeric1} -> isNaN: ${convertedNumeric1IsNaN} -> isInteger: ${convertedNumeric1IsInteger}`;
 const convertedNumeric2Sentence = `Original: '${numericString2}' -> Converted: ${convertedNumeric2} -> isNaN: ${convertedNumeric2IsNaN} -> isInteger: ${convertedNumeric2IsInteger}`;
 const convertedDecimalSentence = `Original: '${decimalString}' -> Converted: ${convertedDecimal} -> isNaN: ${convertedDecimalIsNaN} -> isInteger: ${convertedDecimalIsInteger}`;
-const convertedStringSentence = `Original: '${string}' -> Converted: ${convertedString} -> isNaN: ${convertedStringIsNaN} -> isInteger: ${convertedStringIsInteger}`;   
+const convertedStringSentence = `Original: '${string}' -> Converted: ${finalConvertedString} -> isNaN: ${convertedStringIsNaN} -> isInteger: ${convertedStringIsInteger}`;   
 
 // TODO:
 // 4. Combine all your results into ONE string
@@ -95,7 +110,7 @@ document.querySelector("#numberConversionOutput").innerHTML = finalConversionRes
 // TODO:
 // 1. Create at least 2-3 numeric variables
 
-const orders = 7;
+const shippingCost = 7;
 const numUnits = 29;
 const pricePerUnit = 3.1415;
 //
@@ -111,9 +126,14 @@ const product = numUnits * pricePerUnit;
 //    - Number.parseInt()
 //    - Number.parseFloat()
 const fixedProduct = product.toFixed(2);
+
+//2ND IF/ELSE FOR PART 4 (Checking if fixedProduct is within budget ($50))
+const inBudget = fixedProduct < 50 ? "in budget" : "out of budget"
+
+
 //
 // 4. Build a string showing your results
-const mathResults = `Sum of ${orders} and ${numUnits} is: ${sum}. Product of ${numUnits} and ${pricePerUnit} is: ${product} (fixed to 2 decimal points: ${fixedProduct})`;  
+const mathResults = `Sum of ${orders} and ${numUnits} is: ${sum}. Product of ${numUnits} (number of units) and ${pricePerUnit} (price/unit) is: ${product} (fixed to 2 decimal points: $${fixedProduct}) which is ${inBudget} ($50).`;  
 //
 // 5. Display the results inside the element with id="mathOutput"
 document.querySelector("#mathOutput").textContent = mathResults;
@@ -132,5 +152,6 @@ document.querySelector("#mathOutput").textContent = mathResults;
 //
 // 2. Display a message on the page based on the condition
 //    (append it to an existing section or create a new message)
+
 
 
