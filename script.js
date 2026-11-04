@@ -9,14 +9,15 @@
 // 4. Add leading zeros to month/day if needed
 // 5. Create a string in the format: "Today is MM/DD/YYYY"
 // 6. Display the result in the element with id="dateOutput"
-const today = new Date();
-var month = today.getMonth() + 1;
-var month = month < 10 ? '0' + month: month;
-var day = today.getDate();
-var day = day < 10 ? '0' + day: day;    
-var year = today.getFullYear();
-var formattedDate = `Today is ${month}/${day}/${year}`;
-document.querySelector('#dateOutput').textContent = formattedDate;
+const today = new Date().toLocaleDateString("en-US",
+    {
+        month: "2-digit",
+        day: "2-digit",
+        year: "numeric"
+
+    }
+);
+document.querySelector('#dateOutput').textContent = today;
 
 
 // ==========================
