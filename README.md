@@ -4,7 +4,7 @@
 - `document`: (method: `.querySelect()`)
 - miscellaneous methods: `.toFixed()`, `.join()`
 ### Github Pages link
-## Path to screenshot
+### Path to screenshot
 images/image.png
 ### Reflection questions:
 - What part was easiest? **Part 1**
