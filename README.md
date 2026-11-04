@@ -7,7 +7,7 @@
 ### Path to screenshot
 images/image.png
 ### Reflection questions:
-- What part was easiest? **Part 1**
+- What part was easiest? **Part 1 b/c it was the simplest function call**
 - What part was hardest? **I struggled trying to get `Number(string).isNaN()` to work. Turns out, isNaN is a static method on Number so they had to broken up into 2 lines**
 - What did you learn about the Date object? **You can have the `.toLocaleDateString()` automatically return date and month as 2 digit numbers everytime by doing adding `{
   month: "2-digit",
