@@ -1,4 +1,6 @@
 ### Built-in objects & methods used:
+- `Date()` (methods:`getMonth()`, `getDate()`, `getFullYear`)
+- 
 ### Github Pages link
 ### Reflection questions:
 - What part was easiest?
