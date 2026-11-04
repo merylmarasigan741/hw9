@@ -117,7 +117,7 @@ const pricePerUnit = 3.1415;
 //
 // 2. Perform calculations:
 //    - at least one addition
-const sum = orders + numUnits;
+const sum = shippingCost + numUnits;
 //    - at least one other operation (subtract, multiply, or divide)
 const product = numUnits * pricePerUnit;
 //
@@ -134,7 +134,9 @@ const inBudget = fixedProduct < 50 ? "in budget" : "out of budget"
 
 //
 // 4. Build a string showing your results
-const mathResults = `Sum of ${orders} and ${numUnits} is: ${sum}. Product of ${numUnits} (number of units) and ${pricePerUnit} (price/unit) is: ${product} (fixed to 2 decimal points: $${fixedProduct}) which is ${inBudget} ($50).`;  
+const mathResults = `Sum of ${shippingCost} and ${numUnits} is: ${sum}. Product of ${numUnits} (number of units) and ${pricePerUnit} (price/unit) is: ${product} (fixed to 2 decimal points: $${fixedProduct}) which is ${inBudget} ($50).`;  
+
+
 //
 // 5. Display the results inside the element with id="mathOutput"
 document.querySelector("#mathOutput").textContent = mathResults;
