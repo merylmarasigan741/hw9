@@ -145,7 +145,7 @@ Your code must use all of the following:
 
 ---
 
-## Part 3: Number Formatting and Math Results
+## Part 3: Number Formatting and Math Results [X]
 
 Create a third section called something like:
 

@@ -89,21 +89,21 @@ document.querySelector("#numberConversionOutput").innerHTML = finalConversionRes
 //    id="numberConversionOutput"
 document.querySelector("#numberConversionOutput").innerHTML = finalConversionResult;
 // ==========================
-// Part 3: Math & Formatting
+// Part 3: Math & Formatting [X]
 // ==========================
 
 // TODO:
 // 1. Create at least 2-3 numeric variables
 
-const num1 = 7;
-const num2 = 29;
-const num3 = 3.1415;
+const orders = 7;
+const numUnits = 29;
+const pricePerUnit = 3.1415;
 //
 // 2. Perform calculations:
 //    - at least one addition
-const sum = num1 + num2;
+const sum = orders + numUnits;
 //    - at least one other operation (subtract, multiply, or divide)
-const product = num2 * num3;
+const product = numUnits * pricePerUnit;
 //
 // 3. Use at least ONE of the following:
 //    - toFixed()
@@ -113,7 +113,7 @@ const product = num2 * num3;
 const fixedProduct = product.toFixed(2);
 //
 // 4. Build a string showing your results
-const mathResults = `Sum of ${num1} and ${num2} is: ${sum}. Product of ${num2} and ${num3} is: ${product} (fixed to 2 decimal points: ${fixedProduct})`;  
+const mathResults = `Sum of ${orders} and ${numUnits} is: ${sum}. Product of ${numUnits} and ${pricePerUnit} is: ${product} (fixed to 2 decimal points: ${fixedProduct})`;  
 //
 // 5. Display the results inside the element with id="mathOutput"
 document.querySelector("#mathOutput").textContent = mathResults;
@@ -132,3 +132,5 @@ document.querySelector("#mathOutput").textContent = mathResults;
 //
 // 2. Display a message on the page based on the condition
 //    (append it to an existing section or create a new message)
+
+
