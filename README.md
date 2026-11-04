@@ -4,6 +4,7 @@
 - `document`: (method: `.querySelect()`)
 - miscellaneous methods: `.toFixed()`, `.join()`
 ### Github Pages link
+https://merylmarasigan741.github.io/hw9/
 ### Path to screenshot
 images/image.png
 ### Reflection questions:
