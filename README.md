@@ -1,6 +1,7 @@
 ### Built-in objects & methods used:
-- `Date()` (methods:`getMonth()`, `getDate()`, `getFullYear`)
-- 
+- `Date()` (methods:`.getMonth()`, `.getDate()`, `.getFullYear()`)
+- `Number()` (methods: `.isNaN()`, `.isInteger()`)
+- miscellaneous methods: `.toFixed()`, `.join()`
 ### Github Pages link
 ### Reflection questions:
 - What part was easiest?
