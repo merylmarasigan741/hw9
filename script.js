@@ -14,7 +14,6 @@ const today = new Date().toLocaleDateString("en-US",
         month: "2-digit",
         day: "2-digit",
         year: "numeric"
-
     }
 );
 document.querySelector('#dateOutput').textContent = today;
@@ -112,29 +111,28 @@ document.querySelector("#numberConversionOutput").innerHTML = finalConversionRes
 // 1. Create at least 2-3 numeric variables
 
 const shippingCost = 7;
-const numUnits = 29;
-const pricePerUnit = 3.1415;
+const itemPrice = 29;
+const taxRate = .031415;
 //
 // 2. Perform calculations:
 //    - at least one addition
-const sum = shippingCost + numUnits;
-//    - at least one other operation (subtract, multiply, or divide)
-const product = numUnits * pricePerUnit;
+const taxAmount = itemPrice *  taxRate;
+const totalCost =itemPrice * (1+taxRate) + shippingCost;
+const subtotal = itemPrice * 1;
 //
 // 3. Use at least ONE of the following:
 //    - toFixed()
 //    - toLocaleString()
 //    - Number.parseInt()
 //    - Number.parseFloat()
-const fixedProduct = product.toFixed(2);
 
 //2ND IF/ELSE FOR PART 4 (Checking if fixedProduct is within budget ($50))
-const inBudget = fixedProduct < 50 ? "in budget" : "out of budget"
+// const inBudget = fixedProduct < 50 ? "in budget" : "out of budget"
 
 
 //
 // 4. Build a string showing your results
-const mathResults = `Sum of ${shippingCost} and ${numUnits} is: ${sum}. Product of ${numUnits} (number of units) and ${pricePerUnit} (price/unit) is: ${product} (fixed to 2 decimal points: $${fixedProduct}) which is ${inBudget} ($50).`;  
+const mathResults = `item price: $${itemPrice}, tax: $${taxAmount.toFixed(2)}, shipping:$${shippingCost} total cost: $${totalCost.toFixed(2)}`;  
 
 
 //
@@ -155,6 +153,4 @@ document.querySelector("#mathOutput").textContent = mathResults;
 //
 // 2. Display a message on the page based on the condition
 //    (append it to an existing section or create a new message)
-
-
 
